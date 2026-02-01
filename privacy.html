@@ -174,6 +174,14 @@
             margin-top: 12px;
         }
 
+        .note-box {
+            background-color: var(--section-bg);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-size: 0.95rem;
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 24px 16px 60px;
@@ -200,7 +208,7 @@
 
         <main>
             <section>
-                <h2>1. Who We Are</h2>
+                <h2>1. Who We Are (Data Controller)</h2>
                 <p>Video Notes is a mobile application developed and operated by <strong>Denys Nehometianov</strong>. For the purposes of data protection law, Denys Nehometianov is the data controller responsible for deciding how your information is used.</p>
                 <p><strong>Contact:</strong> <a href="mailto:videonotes.ai@gmail.com">videonotes.ai@gmail.com</a></p>
                 <p>We aim to respond to all inquiries within 30 days.</p>
@@ -213,29 +221,42 @@
             </section>
 
             <section>
-                <h2>3. Information We Collect</h2>
+                <h2>3. Information We Collect and Process</h2>
 
                 <h3>3.1 Device Attestation Token</h3>
                 <p>We use Firebase App Check, a service provided by Google, to verify that requests to our servers come from genuine instances of the app. Firebase App Check generates a device attestation token for this purpose.</p>
-                <div class="highlight-box">
-                    <p><strong>What it is:</strong> A security token used to prevent abuse of our service.</p>
-                    <p style="margin-bottom: 0;"><strong>What it is not:</strong> This token is not linked to your identity, is not used for tracking, and is not shared with advertisers.</p>
-                </div>
-                <p class="legal-basis"><strong>Legal basis (GDPR Art. 6):</strong> Legitimate interest in protecting our service from abuse and unauthorized access.</p>
+                <p><strong>What it is:</strong> A security token used to prevent abuse of our service.</p>
+                <p><strong>What it is not:</strong> This token is not linked to your identity, is not used for tracking, and is not shared with advertisers.</p>
+                <p class="legal-basis"><strong>Legal basis (GDPR Art. 6(1)(f)):</strong> Legitimate interest in protecting our service from abuse and unauthorized access.</p>
 
-                <h3>3.2 Video Transcript Data (Processed, Not Stored)</h3>
-                <p>When you request a video summary, our server receives the video link you provide. The server retrieves the transcript text associated with that video and sends it to an AI service provider for processing.</p>
+                <h3>3.2 Video Link and Transcript Text</h3>
+                <p>When you request a video summary, the following happens:</p>
+                <ol>
+                    <li>You provide a video link in the app.</li>
+                    <li>Our server receives this link, retrieves the publicly available transcript text for that video, and sends the transcript to an AI service provider for processing.</li>
+                    <li>The AI service generates a summary, which is returned to you.</li>
+                    <li>We may cache the generated summary on our server to improve performance for future requests for the same video.</li>
+                </ol>
+
                 <div class="highlight-box">
-                    <p><strong>Important:</strong></p>
+                    <p><strong>Important — No User Identifiers:</strong></p>
                     <ul>
-                        <li>We do not send any user identifiers, account information, device identifiers, or personal data to the AI service provider. The AI request contains only the transcript text needed to generate the summary.</li>
-                        <li>Our server does not store any user identifiers alongside processed data. There is no way to link a summary request back to you.</li>
-                        <li>Video files are not uploaded or stored. Only transcript text is processed.</li>
+                        <li>We do not send any user identifiers, account information, device identifiers, or personal data to the AI service provider. The request to the AI provider contains only the transcript text.</li>
+                        <li>Our server does not store any user identifiers alongside cached summaries. There is no way to link a cached summary back to you or your device.</li>
+                        <li>We do not have user accounts. We cannot identify who requested which summary.</li>
                     </ul>
                 </div>
-                <p class="legal-basis"><strong>Legal basis (GDPR Art. 6):</strong> Contract performance (providing the service you requested).</p>
 
-                <h3>3.3 Information We Do Not Collect</h3>
+                <div class="note-box">
+                    <strong>Note on transcript content:</strong> Video transcripts are created by third parties (video uploaders). In some cases, a transcript may incidentally contain personal data (e.g., names mentioned in the video). We do not control this content. To the extent such data is processed, the AI service provider acts as a data processor.
+                </div>
+
+                <p class="legal-basis"><strong>Legal basis (GDPR Art. 6(1)(b)):</strong> Performance of a contract — providing the summarization service you requested.</p>
+
+                <h3>3.3 Information Stored Locally on Your Device</h3>
+                <p>Your personal notes, saved summaries, and viewing history are stored locally on your device only. This locally stored data is not transmitted to our servers. You have full control over it and can delete it at any time by clearing the app data or uninstalling the app.</p>
+
+                <h3>3.4 Information We Do Not Collect</h3>
                 <ul>
                     <li>Names, email addresses, or phone numbers</li>
                     <li>User accounts or login credentials</li>
@@ -245,23 +266,18 @@
                     <li>Advertising identifiers</li>
                     <li>Browsing history or activity outside this app</li>
                 </ul>
-
-                <h3>3.4 Information Stored Only on Your Device</h3>
-                <p>Your video notes, summaries, and viewing history are stored locally on your device. This data is never transmitted to our servers. You have full control over it and can delete it at any time by clearing the app data or uninstalling the app.</p>
             </section>
 
             <section>
                 <h2>4. How We Use Your Information</h2>
                 <p>We use the information described above for these purposes only:</p>
-                <ul>
-                    <li><strong>Device attestation token:</strong> Verify requests come from legitimate app instances; prevent abuse</li>
-                    <li><strong>Video transcript text:</strong> Generate the summary you requested</li>
-                </ul>
+                <p><strong>Device attestation token:</strong> To verify that requests come from legitimate app instances and to prevent abuse.</p>
+                <p><strong>Video link and transcript text:</strong> To generate the summary you requested and, where applicable, to cache the result for performance.</p>
                 <p>We do not use any data for advertising, profiling, or tracking.</p>
             </section>
 
             <section>
-                <h2>5. Service Providers</h2>
+                <h2>5. Service Providers (Recipients)</h2>
                 <p>We use the following third-party services to operate the app:</p>
 
                 <h3>5.1 Firebase App Check (Google)</h3>
@@ -272,35 +288,39 @@
 
                 <h3>5.2 AI Service Provider</h3>
                 <p><strong>Purpose:</strong> Generate text summaries from video transcripts.</p>
-                <p><strong>Data processed:</strong> Transcript text only. No user identifiers, device identifiers, or personal data are included in requests to the AI provider.</p>
-                <p><strong>Role:</strong> Data processor acting on our instructions.</p>
-                <p>We have contractual arrangements with our service providers requiring them to protect any data they process on our behalf.</p>
+                <p><strong>Data processed:</strong> Transcript text. No user identifiers are included in requests. To the extent transcript text incidentally contains personal data (e.g., names mentioned in the video), the AI provider processes this as a data processor on our behalf.</p>
+                <p><strong>Role:</strong> Data processor, to the extent personal data is processed.</p>
+                <p>We maintain appropriate contractual arrangements with our service providers requiring them to protect any data they process on our behalf and to process it only according to our instructions.</p>
             </section>
 
             <section>
                 <h2>6. Data Retention</h2>
                 <p><strong>Device attestation tokens:</strong> Retained only for the duration needed to validate a request. No long-term storage.</p>
-                <p><strong>Transcript processing:</strong> Transcript text is processed transiently to generate summaries. We do not maintain a database of user requests or summaries linked to individuals. Any server-side caching is temporary, uses rolling expiration, and contains no user identifiers.</p>
-                <p><strong>Local data:</strong> Data stored on your device remains until you delete the app or clear the app data.</p>
+                <p><strong>Cached summaries:</strong> Generated summaries may be cached on our server to improve performance. This cache uses a rolling expiration policy with limited retention. Cached summaries do not contain user identifiers and cannot be linked to any individual.</p>
+                <p><strong>Local data:</strong> Data stored on your device (notes, saved summaries, history) remains until you delete the app or clear the app data.</p>
             </section>
 
             <section>
                 <h2>7. International Data Transfers</h2>
-                <p>Your information may be processed in countries outside your own, including countries outside the European Economic Area. Where we transfer data internationally, we rely on appropriate safeguards recognized under GDPR, such as Standard Contractual Clauses approved by the European Commission, or transfers to countries with an adequate level of data protection.</p>
+                <p>Our service providers may process data in countries outside your own, including countries outside the European Economic Area (EEA). Where personal data is transferred outside the EEA, we rely on appropriate safeguards recognized under GDPR, such as Standard Contractual Clauses (SCCs) approved by the European Commission, or transfers to countries recognized as providing an adequate level of data protection.</p>
             </section>
 
             <section>
-                <h2>8. Your Rights</h2>
-                <p>Under GDPR, you have rights regarding your personal data, including rights to access, rectification, erasure, restriction, portability, and objection.</p>
-                <div class="highlight-box">
-                    <p><strong>Practical limitation:</strong> Because we do not collect personal identifiers and do not link server-side data to individuals, most of these rights cannot be exercised for data processed on our servers. We simply have no way to identify which data, if any, relates to you.</p>
-                </div>
+                <h2>8. Your Rights Under GDPR</h2>
+                <p>Under GDPR, you have rights regarding your personal data, including the rights to access, rectification, erasure, restriction of processing, data portability, and objection.</p>
+
+                <h3>How our design affects these rights</h3>
+                <p>Because we do not collect user identifiers and do not link server-side data to individuals, we are generally unable to identify which cached data, if any, relates to you. Under GDPR Article 11, where processing does not require identification of the data subject, we are not obligated to maintain or acquire additional information solely to identify you. This means:</p>
+                <ul>
+                    <li>If you contact us with a rights request, we may not be able to locate your data unless you provide additional information that enables us to do so.</li>
+                    <li>For locally stored data (on your device), you can exercise your rights directly by viewing, exporting, or deleting that data through your device settings or by uninstalling the app.</li>
+                </ul>
 
                 <h3>What you can do</h3>
                 <ul>
                     <li>Delete all local data by uninstalling the app or clearing app data in your device settings.</li>
-                    <li>Stop all future data collection by uninstalling the app.</li>
-                    <li>Contact us with questions at <a href="mailto:videonotes.ai@gmail.com">videonotes.ai@gmail.com</a>.</li>
+                    <li>Stop all future data processing by uninstalling the app.</li>
+                    <li>Contact us with questions or requests at <a href="mailto:videonotes.ai@gmail.com">videonotes.ai@gmail.com</a>. If you believe specific cached data relates to you and can provide information to help us identify it, we will make reasonable efforts to assist.</li>
                     <li>Lodge a complaint with your local data protection supervisory authority if you are in the EU.</li>
                 </ul>
 
@@ -308,33 +328,38 @@
                 <ul>
                     <li>We do not sell personal information.</li>
                     <li>We do not share data with advertisers or data brokers.</li>
-                    <li>We do not treat you differently based on your privacy choices.</li>
+                    <li>We do not discriminate against you for exercising your privacy rights.</li>
                 </ul>
             </section>
 
             <section>
-                <h2>9. Age Requirement</h2>
-                <p>Video Notes is intended for users aged 16 and older. We do not knowingly collect information from anyone under 16. If you believe a child under 16 has used the app, please contact us.</p>
+                <h2>9. Is Providing Data Mandatory?</h2>
+                <p>Providing the video link is necessary to use the summarization feature. If you do not provide a link, we cannot generate a summary for you. The device attestation token is generated automatically to secure the service; without it, requests may be rejected to prevent abuse.</p>
             </section>
 
             <section>
-                <h2>10. Data Security</h2>
+                <h2>10. Age Requirement</h2>
+                <p>Video Notes is intended for users aged 16 and older, consistent with our App Store age rating. We do not knowingly collect information from anyone under 16. If you believe a child under 16 has used the app, please contact us.</p>
+            </section>
+
+            <section>
+                <h2>11. Data Security</h2>
                 <p>We implement appropriate technical and organizational measures to protect data, including:</p>
                 <ul>
                     <li>Encrypted communications (HTTPS/TLS) between the app and our servers</li>
                     <li>Firebase App Check to verify legitimate app instances</li>
-                    <li>Local-only storage for your notes and history</li>
+                    <li>Local-only storage for your personal notes and history</li>
                     <li>No storage of user identifiers on our servers</li>
                 </ul>
             </section>
 
             <section>
-                <h2>11. Changes to This Policy</h2>
+                <h2>12. Changes to This Policy</h2>
                 <p>We may update this policy from time to time. When we make changes, we will update the "Last Updated" date at the top. For significant changes, we will provide notice within the app before the changes take effect.</p>
             </section>
 
             <section class="contact-section">
-                <h2>12. Contact Us</h2>
+                <h2>13. Contact Us</h2>
                 <p>If you have questions about this policy or our data practices, please contact us:</p>
                 <a href="mailto:videonotes.ai@gmail.com" class="email-link">videonotes.ai@gmail.com</a>
                 <p style="margin-top: 16px; margin-bottom: 0;">If you are in the EU and are not satisfied with our response, you have the right to lodge a complaint with your local data protection supervisory authority.</p>
