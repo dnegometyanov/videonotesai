@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Video Notes</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-color: #1d1d1f;
+            --secondary-text: #6e6e73;
+            --background: #ffffff;
+            --section-bg: #f5f5f7;
+            --border-color: #d2d2d7;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #0A84FF;
+                --text-color: #f5f5f7;
+                --secondary-text: #a1a1a6;
+                --background: #000000;
+                --section-bg: #1c1c1e;
+                --border-color: #38383a;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background);
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+            border-radius: 18px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .last-updated {
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            color: var(--text-color);
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            color: var(--text-color);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background-color: var(--section-bg);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 20px 0;
+        }
+
+        .highlight-box ul {
+            margin-bottom: 0;
+        }
+
+        .highlight-box li:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-section {
+            background-color: var(--section-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            margin-top: 0;
+        }
+
+        .email-link {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white !important;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 500;
+            margin-top: 12px;
+            transition: opacity 0.2s;
+        }
+
+        .email-link:hover {
+            opacity: 0.85;
+            text-decoration: none;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 16px 60px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.35rem;
+                margin-top: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="app-icon">📝</div>
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: February 1, 2026</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>Introduction</h2>
+                <p>This Privacy Policy describes how Video Notes ("we," "our," or "the app") collects, uses, and protects your information when you use our mobile application. Video Notes is developed by Denys Negometyanov.</p>
+                <p>We are committed to protecting your privacy and being transparent about our data practices. This policy complies with applicable privacy laws including the General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), and Children's Online Privacy Protection Act (COPPA).</p>
+            </section>
+
+            <section>
+                <h2>Data Controller</h2>
+                <p><strong>Denys Negometyanov</strong><br>
+                Email: <a href="mailto:videonotes.ai@gmail.com">videonotes.ai@gmail.com</a></p>
+            </section>
+
+            <section>
+                <h2>Information We Collect</h2>
+
+                <h3>Device Identifier</h3>
+                <p>We collect a <strong>Device Identifier</strong> through Firebase App Check, a service provided by Google. This identifier is used solely for:</p>
+                <ul>
+                    <li><strong>App Functionality:</strong> Securing API communications and preventing unauthorized access to our services</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p><strong>This device identifier:</strong></p>
+                    <ul>
+                        <li>Is <strong>not linked</strong> to your personal identity</li>
+                        <li>Is <strong>not used</strong> for tracking you across other apps or websites</li>
+                        <li>Is <strong>not shared</strong> with advertisers or data brokers</li>
+                    </ul>
+                </div>
+
+                <h3>Information We Do NOT Collect</h3>
+                <ul>
+                    <li><strong>Personal Information:</strong> We do not collect names, email addresses, phone numbers, or other personally identifiable information</li>
+                    <li><strong>User Accounts:</strong> The app does not require or support user accounts</li>
+                    <li><strong>Video History:</strong> Your analyzed videos and notes are stored <strong>locally on your device only</strong> and are never transmitted to our servers</li>
+                    <li><strong>Location Data:</strong> We do not collect your location</li>
+                    <li><strong>Contacts:</strong> We do not access your contacts</li>
+                    <li><strong>Photos or Media:</strong> We do not access your photo library</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>How We Use Your Information</h2>
+                <p>The device identifier collected via Firebase App Check is used exclusively for:</p>
+                <ol>
+                    <li><strong>API Security:</strong> Verifying that requests to our services come from legitimate instances of the app</li>
+                    <li><strong>Fraud Prevention:</strong> Protecting against abuse and unauthorized access</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Third-Party Services</h2>
+
+                <h3>Firebase App Check (Google)</h3>
+                <p>We use Firebase App Check to verify the authenticity of app instances. Firebase App Check may collect:</p>
+                <ul>
+                    <li>Device attestation tokens</li>
+                    <li>App instance identifiers</li>
+                </ul>
+                <p>For more information about Firebase's data practices, please review:</p>
+                <ul>
+                    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a></li>
+                    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+                </ul>
+
+                <h3>AI Content Generation</h3>
+                <p>Video Notes uses artificial intelligence to generate video summaries and notes. The AI-generated content:</p>
+                <ul>
+                    <li>Is created based on the video content you choose to analyze</li>
+                    <li>Is processed through secure API connections</li>
+                    <li>Is stored only on your local device</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Data Retention</h2>
+                <ul>
+                    <li><strong>Device Identifier:</strong> Retained only as long as necessary for security verification purposes</li>
+                    <li><strong>Local Data:</strong> Video notes and history stored on your device remain there until you delete the app or clear the app's data</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Your Rights</h2>
+
+                <h3>For All Users</h3>
+                <p>You have the right to:</p>
+                <ul>
+                    <li><strong>Access:</strong> Request information about what data we have about you</li>
+                    <li><strong>Deletion:</strong> Request deletion of any data we have collected</li>
+                    <li><strong>Opt-out:</strong> Uninstall the app to stop all data collection</li>
+                </ul>
+
+                <h3>For European Union Residents (GDPR)</h3>
+                <p>Under GDPR, you additionally have the right to:</p>
+                <ul>
+                    <li><strong>Rectification:</strong> Request correction of inaccurate data</li>
+                    <li><strong>Portability:</strong> Request your data in a portable format</li>
+                    <li><strong>Restriction:</strong> Request restriction of processing</li>
+                    <li><strong>Object:</strong> Object to processing of your data</li>
+                    <li><strong>Lodge a Complaint:</strong> File a complaint with a supervisory authority</li>
+                </ul>
+
+                <h3>For California Residents (CCPA)</h3>
+                <p>Under CCPA, you have the right to:</p>
+                <ul>
+                    <li>Know what personal information is collected</li>
+                    <li>Know whether your personal information is sold or disclosed</li>
+                    <li>Say no to the sale of personal information (we do not sell your data)</li>
+                    <li>Access your personal information</li>
+                    <li>Request deletion of your personal information</li>
+                    <li>Equal service and price, even if you exercise your privacy rights</li>
+                </ul>
+
+                <p>To exercise any of these rights, please contact us at <a href="mailto:videonotes.ai@gmail.com">videonotes.ai@gmail.com</a>.</p>
+            </section>
+
+            <section>
+                <h2>Children's Privacy</h2>
+                <p>Video Notes is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us at <a href="mailto:videonotes.ai@gmail.com">videonotes.ai@gmail.com</a> and we will take steps to delete such information.</p>
+            </section>
+
+            <section>
+                <h2>Data Security</h2>
+                <p>We implement appropriate technical and organizational measures to protect the data we collect, including:</p>
+                <ul>
+                    <li>Secure API communications using industry-standard encryption</li>
+                    <li>Firebase App Check attestation to prevent unauthorized access</li>
+                    <li>Local-only storage of your personal notes and video history</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>International Data Transfers</h2>
+                <p>If you are accessing the app from outside the United States, please be aware that your information may be transferred to, stored, and processed in the United States where our servers are located. By using the app, you consent to such transfer.</p>
+            </section>
+
+            <section>
+                <h2>Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by:</p>
+                <ul>
+                    <li>Updating the "Last Updated" date at the top of this policy</li>
+                    <li>Providing notice within the app for significant changes</li>
+                </ul>
+                <p>We encourage you to review this Privacy Policy periodically for any changes.</p>
+            </section>
+
+            <section class="contact-section">
+                <h2>Contact Us</h2>
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+                <a href="mailto:videonotes.ai@gmail.com" class="email-link">videonotes.ai@gmail.com</a>
+                <p style="margin-top: 16px; margin-bottom: 0;">We will respond to your inquiry within 30 days.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>This privacy policy is effective as of February 1, 2026.</p>
+            <p style="margin-top: 8px;">&copy; 2026 Video Notes. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
