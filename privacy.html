@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - Video Notes</title>
+    <title>Privacy Policy - Video Notes</title>
     <style>
         :root {
             --primary-color: #007AFF;
@@ -67,9 +67,9 @@
             letter-spacing: -0.02em;
         }
 
-        .subtitle {
+        .last-updated {
             color: var(--secondary-text);
-            font-size: 1.1rem;
+            font-size: 0.95rem;
         }
 
         h2 {
@@ -81,20 +81,12 @@
             letter-spacing: -0.01em;
         }
 
-        h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-top: 28px;
-            margin-bottom: 12px;
-            color: var(--text-color);
-        }
-
         p {
             margin-bottom: 16px;
             color: var(--text-color);
         }
 
-        ul, ol {
+        ul {
             margin-bottom: 16px;
             padding-left: 24px;
         }
@@ -155,22 +147,6 @@
             text-decoration: none;
         }
 
-        .faq-item {
-            background-color: var(--section-bg);
-            border-radius: 12px;
-            padding: 20px 24px;
-            margin: 16px 0;
-        }
-
-        .faq-item h3 {
-            margin-top: 0;
-            margin-bottom: 8px;
-        }
-
-        .faq-item p {
-            margin-bottom: 0;
-        }
-
         footer {
             margin-top: 60px;
             padding-top: 24px;
@@ -204,74 +180,100 @@
     <div class="container">
         <header>
             <img src="app-icon.png" alt="Video Notes" class="app-icon">
-            <h1>Support</h1>
-            <p class="subtitle">Video Notes - Help & FAQ</p>
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: February 2, 2026</p>
         </header>
 
         <main>
             <section>
-                <h2>How Can We Help?</h2>
-                <p>We're here to help you get the most out of Video Notes. Below you'll find answers to common questions and ways to contact us.</p>
+                <h2>Introduction</h2>
+                <p>Video Notes is a mobile app that helps you summarize YouTube videos. This policy explains how we handle your information. We've designed the app with privacy in mind — we don't create accounts, don't track you, and keep your data local.</p>
+                <p><strong>Contact:</strong> <a href="mailto:videonotes.ai@gmail.com">videonotes.ai@gmail.com</a></p>
             </section>
 
             <section>
-                <h2>Frequently Asked Questions</h2>
+                <h2>Information We Collect</h2>
+                <ul>
+                    <li><strong>Device attestation token</strong> — A security token from Firebase App Check to verify requests come from the real app (not linked to your identity)</li>
+                    <li><strong>Video transcripts</strong> — Sent to our AI service to generate summaries (not linked to you)</li>
+                    <li><strong>Cached summaries</strong> — We may cache summaries on our server to speed up future requests for the same video</li>
+                </ul>
+            </section>
 
-                <div class="faq-item">
-                    <h3>How do I analyze a video?</h3>
-                    <p>Simply paste a YouTube video URL into the app and tap "Analyze". Video Notes will generate a summary and key notes from the video content.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Where are my notes stored?</h3>
-                    <p>All your video notes and history are stored <strong>locally on your device</strong>. They are never uploaded to our servers and remain private to you.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Do I need an account?</h3>
-                    <p>No. Video Notes does not require registration or login. You can start using the app immediately.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>What videos are supported?</h3>
-                    <p>Video Notes currently supports YouTube videos that have available transcripts or captions.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>How do I delete my data?</h3>
-                    <p>Since all data is stored locally on your device, you can delete it by clearing the app's data in your device settings or by uninstalling the app.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Is my data private?</h3>
-                    <p>Yes. We do not collect personal information or link any data to your identity. Please see our <a href="privacy.html">Privacy Policy</a> for details.</p>
+            <section>
+                <h2>Information We Do NOT Collect</h2>
+                <div class="highlight-box">
+                    <ul>
+                        <li>No accounts or login</li>
+                        <li>No names, emails, or phone numbers</li>
+                        <li>No location data</li>
+                        <li>No contacts or photos</li>
+                        <li>No advertising IDs</li>
+                        <li>No cross-app tracking</li>
+                    </ul>
                 </div>
             </section>
 
             <section>
-                <h2>Troubleshooting</h2>
+                <h2>How We Use Your Information</h2>
+                <ul>
+                    <li><strong>Device token</strong> — To prevent abuse and verify legitimate app requests</li>
+                    <li><strong>Transcripts</strong> — To generate the video summary you requested</li>
+                    <li><strong>Caching</strong> — To improve performance for popular videos</li>
+                </ul>
+                <p>We never use your data for advertising, profiling, or tracking.</p>
+            </section>
 
-                <div class="faq-item">
-                    <h3>The app won't analyze my video</h3>
-                    <p>Make sure the video has available captions or transcripts. Some videos may not have transcripts available, which prevents analysis.</p>
-                </div>
+            <section>
+                <h2>Third-Party Services</h2>
+                <p><strong>Firebase App Check (Google)</strong> — Verifies that requests come from the genuine app. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a></p>
+                <p><strong>AI Service Provider</strong> — Generates summaries from video transcripts. No user identifiers are sent.</p>
+            </section>
 
-                <div class="faq-item">
-                    <h3>Analysis is taking too long</h3>
-                    <p>Longer videos may take more time to process. Please ensure you have a stable internet connection and try again.</p>
-                </div>
+            <section>
+                <h2>Data Retention</h2>
+                <ul>
+                    <li>Device tokens are temporary and not stored long-term</li>
+                    <li>Cached summaries are anonymous and cannot be linked to you</li>
+                    <li>Local data (your notes and history) stays on your device until you delete it</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Your Rights</h2>
+                <ul>
+                    <li><strong>Delete your data</strong> — Uninstall the app or clear app data in device settings</li>
+                    <li><strong>Stop processing</strong> — Uninstalling the app stops all future data processing</li>
+                    <li><strong>Questions</strong> — Contact us at <a href="mailto:videonotes.ai@gmail.com">videonotes.ai@gmail.com</a></li>
+                </ul>
+                <p>We do not sell personal information or share data with advertisers.</p>
+            </section>
+
+            <section>
+                <h2>Security</h2>
+                <p>We use encrypted connections (HTTPS) and Firebase App Check to protect the service. Your notes and history are stored only on your device.</p>
+            </section>
+
+            <section>
+                <h2>Children</h2>
+                <p>Video Notes is for users 16 and older. We do not knowingly collect information from children under 16.</p>
+            </section>
+
+            <section>
+                <h2>Changes</h2>
+                <p>We may update this policy and will change the "Last Updated" date. For significant changes, we'll notify you in the app.</p>
             </section>
 
             <section class="contact-section">
                 <h2>Contact Us</h2>
-                <p>Can't find what you're looking for? We're happy to help.</p>
+                <p>Have questions about this policy?</p>
                 <a href="mailto:videonotes.ai@gmail.com" class="email-link">videonotes.ai@gmail.com</a>
-                <p style="margin-top: 16px; margin-bottom: 0;">We typically respond within 48 hours.</p>
             </section>
         </main>
 
         <footer>
-            <p><a href="privacy.html">Privacy Policy</a></p>
+            <p><a href="support.html">Support</a></p>
+            <p style="margin-top: 8px;">This privacy policy is effective as of February 2, 2026.</p>
             <p style="margin-top: 8px;">&copy; 2026 Video Notes. All rights reserved.</p>
         </footer>
     </div>
